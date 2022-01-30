@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bola Pintada</title>
+    </head>
+    <body>
+        <canvas width="600" height="400"></canvas>
+        Escolha uma cor <input type="color" />
+        <script>
+            var tela = document.querySelector('canvas')
+            var pincel = tela.getContext('2d')
+
+            pincel.fillStyle = 'gray'
+            pincel.fillRect(0, 0, 600, 400)
+
+            var raio = 10 // a bola fica cada vez maior
+
+            function desenhaCirculo(evento) {
+                var color = document.querySelector('input').value
+                console.log(color)
+                var x = evento.pageX - tela.offsetLeft
+                var y = evento.pageY - tela.offsetTop
+
+                // var raio = 10 // a bola fica maior segurando o shiftKey soltando volta ao normal
+
+                console.log(x + ',' + y)
+
+                if (evento.shiftKey) {
+                    raio = raio + 10 // raio agora passa a valer 20
+                }
+                if (raio >= 50) {
+                    raio = 50 // esse if a bola parar de crescer em 50
+                }
+                if (evento.altKey) {
+                    raio = raio - 10 // raio agora passa a valer 20
+                }
+                if (raio < 10) {
+                    raio = 10 // esse if a bola parar de crescer em 50
+                }
+
+                pincel.fillStyle = color
+                pincel.beginPath()
+                pincel.arc(x, y, raio, 0, 2 * 3.14)
+                pincel.fill()
+            }
+
+            tela.onclick = desenhaCirculo
+        </script>
+    </body>
+</html>

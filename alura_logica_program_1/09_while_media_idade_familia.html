@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <meta charset="UTF-8" />
+    <script>
+        function pulaLinha() {
+            document.write('<br /><br />')
+        }
+
+        function mostra(frase) {
+            document.write(frase)
+            pulaLinha()
+        }
+
+        // var pedro = 28
+        // var marta = 32
+        // var jorge = 60
+        // var bete = 22
+
+        var familia = parseInt(prompt('QUANTOS de familiares você tem?'))
+        var n = 1
+        var totalIdades = 0
+        while (n++ <= familia) {
+            var idade = parseInt(prompt('Informe IDADE de cada familiares!'))
+            totalIdades = totalIdades + idade
+            console.log(idade)
+        }
+        var media = totalIdades / familia
+        mostra('A média das idades do familiares é: ' + media)
+        mostra('FIM')
+    </script>
+</html>

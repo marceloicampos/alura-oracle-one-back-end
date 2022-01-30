@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<script>
+    function pulaLinha() {
+        document.write('<br /><br />')
+    }
+
+    function mostra(frase) {
+        document.write(frase)
+        pulaLinha()
+    }
+
+    var vit = parseInt(prompt('número de vitórias'))
+    var emp = parseInt(prompt('número de empates'))
+    // 1 vit vale 3 pontos
+    // 1 emp vale 1 ponto
+    var pontos = vit * 3 + emp
+    console.log(pontos)
+    mostra('os pontos do seu time é: ' + pontos)
+    if (pontos > 28) {
+        mostra('SUBIU DE SÉRIE')
+    }
+    if (pontos < 28) {
+        mostra('CAIU NA SÉRIE')
+    }
+    if (pontos == 28) {
+        mostra('FICOU NA SÉRIE')
+    }
+    mostra('FIM')
+
+    // if (pontos > 28) {
+    //     mostra('SUBIU DE SÉRIE')
+    // } else if (pontos < 28) {
+    //     mostra('CAIU NA SÉRIE')
+    // } else if (pontos == 28) {
+    //     mostra('FICOU NA SÉRIE')
+    // }
+    // mostra('FIM')
+</script>

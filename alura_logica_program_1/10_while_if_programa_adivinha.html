@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <meta charset="UTF-8" />
+    <script>
+        function pulaLinha() {
+            document.write('<br /><br />')
+        }
+
+        function mostra(frase) {
+            document.write(frase)
+            pulaLinha()
+        }
+        // while (isNaN(numeroPensado)) {
+        //     var numeroPensado = (Math.random() * 10).toFixed(0)
+        //     console.log(numeroPensado)
+        // }
+        var numeroPensado = (Math.random() * 10).toFixed(0)
+        console.log(numeroPensado)
+        var n = 1
+        var t = 1
+        while (n <= 3) {
+            var chute = parseInt(prompt('DIGITE UM NÚMERO DE 0 ATÉ 10'))
+            if (chute == numeroPensado) {
+                mostra('SEU NÚMERO DIGITADO FOI: ' + chute)
+                mostra('PARABÉNS VOCÊ ACERTOU O NÚMERO: ' + numeroPensado)
+                break
+                // n = 3
+            } else if (chute !== numeroPensado) {
+                mostra('SEU NÚMERO DIGITADO FOI: ' + chute)
+                mostra('VOCÊ ERROU O NÚMERO, O NÚMERO ERA: ' + numeroPensado)
+                mostra('TENTATIVA ' + t++)
+                mostra('------------------')
+            }
+            n++
+        }
+        mostra('FIM')
+    </script>
+</html>

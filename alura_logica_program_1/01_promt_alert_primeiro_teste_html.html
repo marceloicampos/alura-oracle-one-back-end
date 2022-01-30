@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Meu Primeiro Teste</title>
+    </head>
+    <body>
+        <h1>Meu Primeiro Teste!</h1>
+        <p>Isso realmente é um programa!</p>
+        <a href="https://www.alura.com.br/" target="_blank"
+            >Descubra visitando o Alura!</a
+        >
+        <script>
+            var idade = parseInt(prompt('Digite sua idade'))
+            console.log(typeof idade)
+            console.log(idade)
+            while (isNaN(idade)) {
+                idade = parseInt(
+                    prompt('Digite SOMENTE NÚMEROS. Digite sua idade')
+                )
+            }
+            alert('Sua Idade é: ' + idade + ' anos !')
+            alert('Isso sim é um programa!')
+            document.write('Sua Idade é: ' + idade + ' anos !')
+        </script>
+    </body>
+</html>

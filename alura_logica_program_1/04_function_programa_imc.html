@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<script>
+    function pulaLinha() {
+        document.write('<br /><br /><br /><br />')
+    }
+
+    function mostra(frase) {
+        document.write(frase)
+        pulaLinha()
+    }
+
+    function calcImc(nome, peso, altura) {
+        imc = (peso / altura ** 2).toFixed(2)
+        mostra(nome + ', seu imc é: ' + imc)
+        return (peso / altura ** 2).toFixed(2)
+        // return imc
+        // esse return é: CUSPA PARA FORA O QUE FOR PEDIDO
+    }
+
+    var pesoInicial = 97
+    var alturaInicial = 1.67
+    var imcInicial = (pesoInicial / alturaInicial ** 2).toFixed(2)
+
+    var pesoIdeal = 70
+    var alturaIdeal = 1.67
+    var imcIdeal = (pesoIdeal / alturaIdeal ** 2).toFixed(2)
+
+    // imc é peso dividido pela altura ao quadrado
+
+    mostra('Seu imc inicial é: ' + imcInicial)
+    mostra('Seu imc ideal é: ' + imcIdeal)
+
+    calcImc('Marcelo', 97, 1.67)
+    calcImc('Eduarda', 70, 1.67)
+
+    var imc1 = parseFloat(calcImc('Paulo', 97, 1.77))
+    var imc2 = parseFloat(calcImc('Jose', 70, 1.87))
+    var soma = (imc1 + imc2).toFixed(2)
+
+    mostra('Esse é o return do imc Paulo ' + imc1)
+    mostra('Esse é o return do imc Jose ' + imc2)
+    mostra('Essa é o soma dos return ' + soma)
+
+    function calcImcInfo(peso, altura) {
+        return peso / altura ** 2
+        // return imc
+        // esse return é: CUSPA PARA FORA O QUE FOR PEDIDO
+    }
+
+    var name = prompt('Informe seu Nome')
+    var pesoInformada = prompt('Informe seu Peso')
+    var alturaInformada = prompt('Informe sua Altura')
+    var imcInformada = calcImcInfo(pesoInformada, alturaInformada)
+    document.write(
+        name + ' o Imc Calculado é: ' + imcInformada.toFixed(2) + '<br /><br />'
+    )
+    if (imcInformada > 35) {
+        mostra('VOCÊ ESTÁ GORDO')
+    } else if (imcInformada < 18.5) {
+        mostra('VOCÊ ESTÁ MAGRO')
+    } else if (imcInformada >= 18.5 <= 35) {
+        mostra('VOCÊ ESTÁ NORMAL')
+    }
+</script>

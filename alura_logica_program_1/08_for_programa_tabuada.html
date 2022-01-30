@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <meta charset="UTF-8" />
+    <script>
+        function pulaLinha() {
+            document.write('<br /><br />')
+        }
+
+        function mostra(frase) {
+            document.write(frase)
+            pulaLinha()
+        }
+
+        var tabu = parseInt(prompt('digite um número:'))
+        while (isNaN(tabu)) {
+            var tabu = parseInt(prompt('digite SOMENTE um número:'))
+        }
+
+        var multi = 1
+        var n = 1
+
+        while (multi <= 10) {
+            mostra('tabuada do ' + tabu + 'x' + n++ + '=' + tabu * multi)
+            multi = multi + 1
+        }
+        mostra('FIM')
+
+        // for (let i = 0; i < array.length; i++) {
+        //     // i = primeiro multiplicador
+        //     // i < é a condição
+        //     // i++ é o segundo multiplicador
+        //     const element = array[i]
+        //     // criamos uma const que recebe uma lista ou um array do operação
+        // }
+
+        for (var m = 1; m <= 10; m++) {
+            mostra('tabuada do ' + tabu + 'x' + n++ + '=' + tabu * m)
+        }
+        mostra('FIM')
+
+        for (var i = 0; i < 10; i++) {
+            alert('O resultado é ' + 2 * i)
+        }
+
+        var i = 0
+
+        while (i < 10) {
+            alert('O resultado é ' + 2 * i)
+            i++
+        }
+    </script>
+</html>

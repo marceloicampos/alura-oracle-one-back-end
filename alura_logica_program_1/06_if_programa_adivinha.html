@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<script>
+    function pulaLinha() {
+        document.write('<br /><br /><br /><br />')
+    }
+
+    function mostra(frase) {
+        document.write(frase)
+        pulaLinha()
+    }
+
+    var numeroPensado = (Math.random() * 10).toFixed(0)
+    console.log(numeroPensado)
+    var chute = parseInt(prompt('digite seu chute'))
+    if (chute == numeroPensado) {
+        mostra('SEU NÚMERO DIGITADO FOI: ' + chute)
+        mostra('PARABÉNS VOCÊ ACERTOU O NÚMERO: ' + numeroPensado)
+    } else {
+        mostra('SEU NÚMERO DIGITADO FOI: ' + chute)
+        mostra('VOCÊ ERROU O NÚMERO, O NÚMERO ERA: ' + numeroPensado)
+        mostra('FIM')
+    }
+</script>

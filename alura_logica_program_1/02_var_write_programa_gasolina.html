@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+texto html
+<br />
+<script>
+    alert('Minha Idade é: ' + '42 anos')
+    var hoje = new Date()
+    var ano = hoje.getFullYear()
+    var nasci = new Date(1979, 1, 10, 23, 59, 59)
+    console.log(hoje)
+    console.log(ano)
+    console.log(nasci)
+    document.write('texto inserido no html pelo javascript')
+    document.write('<h1>OI</h1><p>Olá</p>')
+    document.write(
+        '<h1>' + '21 ' + '+' + ' 21' + ' é igual a: ',
+        21 + 21 + '</h1>'
+    )
+    document.write(
+        'Minha idade é: ',
+        ((hoje - nasci) / 31557600000).toFixed(0),
+        '<br />'
+    )
+    document.write('Minha Idade hoje é: ' + (ano - 1979) + '<br />')
+    document.write('string 21 + string 21 é igual a: ' + ('21' + '21'))
+    document.write('<br />')
+    document.write('string 21 + number 21 é igual a: ', '21' + 21)
+    document.write('<br />')
+    document.write('number 21 + number 21 é igual a: ' + (21 + 21) + '<br />')
+    document.write('string M + number 21 é igual a: ', 'M' + 21 + '<br />')
+    document.write('0 / 0 é igual a: ', 0 / 0)
+    document.write('<br />')
+    document.write(
+        '(3.2317006071311 * 10e616) / (3.2317006071311 * 10e616) é igual a: ',
+        (3.2317006071311 * 10e616) / (3.2317006071311 * 10e616)
+    )
+    document.write('<br />')
+    document.write(
+        'NaN simplesmente representa um valor que não pôde ser determinado pela aritmética computacional.'
+    )
+    document.write('<h3>Álcool ou Gasolina?</h3>')
+    var tanque = 40
+
+    var caminhoComGasolina = 480
+    var consumoDeGasolina = caminhoComGasolina / tanque
+
+    var caminhoComAlcool = 300
+    var consumoDeAlcool = caminhoComAlcool / tanque
+
+    document.write('O consumo de Gasolina é ' + consumoDeGasolina + ' km/L')
+
+    document.write('<br>')
+
+    document.write('O consumo de Álcool é ' + consumoDeAlcool + ' km/L')
+</script>

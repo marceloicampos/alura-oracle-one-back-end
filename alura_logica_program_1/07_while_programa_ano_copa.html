@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <meta charset="UTF-8" />
+    <script>
+        function pulaLinha() {
+            document.write('<br /><br />')
+        }
+
+        function mostra(frase) {
+            document.write(frase)
+            pulaLinha()
+        }
+
+        var limite = Number(prompt('digite um ano: '))
+        var anoCopa = 1930
+        // mostra('a ' + anoCopa)
+        // anoCopa = anoCopa + 4
+        // mostra('b ' + anoCopa)
+        // anoCopa += 4
+        // mostra('c ' + anoCopa)
+        // anoCopa++
+        // mostra('d ' + anoCopa)
+        // anoCopa--
+        // mostra('e ' + anoCopa)
+        // anoCopa+=4
+        // mostra('f ' + anoCopa)
+        while (anoCopa <= limite) {
+            mostra('a ' + anoCopa)
+            anoCopa = anoCopa + 4
+        }
+        // dentro do param () passamos a condição de repetição da instrução
+        // true faz repetição pra sempre sem parar. CUIDADO !
+        // false não faz repetição
+        // quando termina a repetição ou quando termina o while o JS sai da instrução e passa para próxima
+        mostra('FIM')
+
+        var n = 2
+
+        while (n <= 100) {
+            mostra('números pares de 1 a 100: ' + n)
+            n += 2
+        }
+        mostra('FIM')
+
+        var n = 30
+
+        while (n >= 30 && n <= 40) {
+            mostra('números de 30 até 40 EXCETO 33 e 37: ' + n)
+            n = n + 1
+            if (n == 33) {
+                n = n + 1
+            }
+            if (n == 37) {
+                n = n + 1
+            }
+        }
+        mostra('FIM')
+
+        var contador = 30
+
+        while (contador <= 40) {
+            if (contador == 33) {
+                contador = contador + 1
+            }
+            if (contador == 37) {
+                contador = contador + 1
+            } else {
+                mostra(contador)
+                contador = contador + 1
+            }
+        }
+        mostra('FIM')
+
+        var n = 20
+
+        while (n >= 0) {
+            mostra('0 a 20 em ordem decrescente: ' + n)
+            n = n - 1
+        }
+        var n = 0
+
+        // while (n <= 20) {
+        //     mostra('0 a 20 em ordem decrescente: ' + n)
+        //     n = n - 1
+        // }
+        // no caso acima dá loop infinito
+        mostra('FIM')
+
+        var n = 0
+
+        while (n <= 2) {
+            n = n + 1
+            var loginCadastrado = 'alura'
+            var senhaCadastrada = 'alura321'
+            var loginInformado = prompt('Informe seu login')
+            var senhaInformada = prompt('Informe sua senha')
+            if (
+                loginCadastrado == loginInformado &&
+                senhaCadastrada == senhaInformada
+            ) {
+                n = 3
+                alert('Bem-vindo ao sistema ' + loginInformado)
+                mostra('VOCÊ ACESSOU O SISTEMA !')
+            } else {
+                alert('Login inválido. Tente novamente')
+            }
+        }
+        if (
+            loginCadastrado !== loginInformado &&
+            senhaCadastrada !== senhaInformada
+        ) {
+            mostra('VOCÊ ERROU A SENHA !')
+        }
+        mostra('FIM')
+
+        var loginCadastrado = 'alura'
+        var senhaCadastrada = 'alura321'
+
+        var maxTentativas = 3
+        var tentativaAtual = 1
+
+        while (tentativaAtual <= maxTentativas) {
+            var loginInformado = prompt('Informe seu login')
+            var senhaInformada = prompt('Informe sua senha')
+
+            if (
+                loginCadastrado == loginInformado &&
+                senhaCadastrada == senhaInformada
+            ) {
+                alert('Bem-vindo ao sistema, ' + loginInformado)
+
+                tentativaAtual = maxTentativas // acertou, então faço o gasto de todas as tentativas para sair do loop. Lá o final vai incrementar + 1!
+            } else {
+                if (tentativaAtual == 3) {
+                    alert('Número permitido de tentativas ultrapassado!')
+                } else {
+                    alert('Login inválido. Tente novamente')
+                }
+            }
+
+            // vai para a próxima tentativa
+            tentativaAtual = tentativaAtual + 1
+        }
+    </script>
+</html>

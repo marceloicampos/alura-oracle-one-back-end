@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Git e Git Hub</title>
+        <style>
+            p {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Git e Git Hub</p>
+        <p>GIT é um sistema de controle de versão distribuído</p>
+        <p>' git init ' - inicia o repo no git</p>
+        <p>' git status ' - mostra o status do repo no git</p>
+        <p>' git add ' - adiciona arquivos ao repositório</p>
+        <p>
+            ' git add . ' - adiciona ao repositório todos oas arquivos não
+            monitorados ou alterados
+        </p>
+        <p>
+            ' git rm --cached file.tal ' - remove arquivo recém adicionado ao
+            repositório
+        </p>
+        <p>
+            COMMITS são endpoints das alterações em geral atrelados a uma
+            mensagem de referência das alterações
+        </p>
+        <p>
+            ' git commit -m "mensagem" ' - irá comitar todas as alterações
+            indicadas pelo git add no repositório
+        </p>
+        <p>' git log ' - mostra o log do git</p>
+        <p>' git log --oneline ' - mostra os logs em linha</p>
+        <p>' git log - p ' - mostra todas as alterações de todos os commits</p>
+        <p><a href="https://devhints.io/git-log">Exemplos de git log</a></p>
+        <p>GIT CONFIG é onde fazemos as configurações básicas do git</p>
+        <p>LOCAL - para projeto local</p>
+        <p>' git config --local user.name "seu nome aqui" '</p>
+        <p>' git config --local user.email "seu@email.aqui" '</p>
+        <p>GLOBAL - para todos projetos</p>
+        <p>' git config --global user.name "seu nome aqui" '</p>
+        <p>' git config --global user.email "seu@email.aqui" '</p>
+        <p>' cat .gitconfig ' - para ver as configurações do git</p>
+        <p>
+            GIT IGNORE o arquivo .gitignore ignora os arquivos e pastas que não
+            queremos registrar no repositório, dentro do .gitignore passamos as
+            pastas, arquivos e ou extensões de arquivos que não queremos
+            registrar
+        </p>
+        <p>
+            SERVIDOR LOCAL DE GIT - crie um "pasta servidor" - separada e no
+            mesmo nível da pasta de trabalho ou em outro local do sistema -
+            exemplo: ' mkdir z_server ' e dentro dessa pasta passe o seguinte
+            comando para criar o git server ' git init --bare ', assim criamos
+            um servidor de git local
+        </p>
+        <p>
+            GIT REMOTE - com o ' git remote ', na pasta atual de trabalho do
+            nosso projeto iniciado com git init, podemos verificar se o repo
+            atual contem um repo remoto e com ' git remote -v ' podemos mostrar
+            o endereço do remoto
+        </p>
+        <p>
+            O GIT REMOTE ADD é usado para inserir um novo remote usamos assim:
+            git remote add com parâmetro nome do remoto e caminho do repo
+            ficando assim o exemplo comando: ' git remote add local_z_server
+            "C:\Users\marce\projects\z_server" ' - para remover o remote usamos
+            ' git remote remove local_z_server '
+        </p>
+        <p>
+            O GIT PUSH "empurra" o repo para o servidor, ficando assim o
+            comando: ' git push -u local_z_server main ' . NOTA: o parâmetro - u
+            indica que daqui por diante iremos usar no push os parâmetros
+            local_z_server e main, assim não precisamos mais digitar o repo
+            remote - local_z_server - nem a branch main, após usar o parâmetro
+            -u basta digitar ' git push ' que os commits serão enviados para
+            local_z_server na brach main, assim use com cuidado
+        </p>
+        <p>
+            O GIT CLONE, faz a clonagem do repo no caso: ' git clone
+            "C:\Users\marce\projects\z_server" nova pasta ' com parâmetros do
+            caminho de onde queremos clonar e a pasta para onde queremos clonar
+        </p>
+        <p>
+            O GIT PULL "puxa" o dados do repo remoto e trás para repo de
+            trabalho usando assim ' git pull local_z_server main '
+        </p>
+        <p>
+            Por fim podemos dar um ' git remote rename origin local_z_server '
+            para ficarmos com o mesmo nome de remote, ou seja, o repo clonado
+            geralmente começa com o repo name origin e usamos o rename para
+            ficarmos com o mesmo nome do remoto
+        </p>
+        <p>
+            O GIT BRANCH indica a ramificação do projeto, o branch atual e
+            padrão é o main, fazendo ' git branch master ' criamos a branch
+            master e fazendo ' git checkout master ' mudamos para branch master
+            ao contrário fazendo ' git checkout main ' voltamos para main, assim
+            podemos trabalhar em projetos paralelos sem "atrapalhar" o projeto
+            principal. NOTA: ATALHO PARA CRIAMOS UMA BRANCH E ENTRAR DIRETO NELE
+            é usando assim: ' git checkout -b test ' assim criamos a branch test
+            fazemos checkout na nova branch test
+        </p>
+        <p>
+            O GIT MERGE faz a "união" de branches, mas não exclui a branch
+            ramificada, fazendo assim: entramos na brach main com ' git checkout
+            main ' e dentro da main fazemos um ' git merge master ', isso irá
+            "juntar" as branches, a branch master continua do jeito que era e a
+            branch main agora contem as alterações da master, caso entre no
+            editor VIM para editar e salvar a mensagem de commit para sairmos e
+            salvar digitamos :X e teclamos ENTER
+        </p>
+        <p>
+            GIT REBASE - sem a necessidade de fazer um merge da master na main,
+            podemos: criar a branch master com ' git checkout -b master ' ou '
+            git branch master ' e depois ' git checkout master ' trabalhar na
+            master gerando commits na linha de trabalho, voltando para main com
+            ' git checkout main ' geramos mais commits na main criando uma nova
+            linha de trabalho, assim teremos 2 linhas de trabalhos: a linha do
+            master e a linha do main, podemos realizar um merge da master na
+            main, mas PODEMOS TAMBÉM fazer REBASE da master na main e continuar
+            numa linha só de trabalho, assim dentro da branch main damos ' git
+            rebase master ' e "juntamos" a master com a main numa única linha de
+            trabalho. NOTA: agora a brach master deixará de existir "isolada",
+            pois master foi "re baseada" dentro da main
+        </p>
+        <p>
+            O MERGE junta os trabalhos e gera um merge commit, ainda mantendo as
+            duas linhas de trabalho.
+        </p>
+        <p>
+            O REBASE aplica os commits de outra branch na branch atual e mantém
+            uma única fila de trabalho
+        </p>
+        <p>
+            Para visualizarmos o git em forma de gráfico podemos dar o comando
+            'git log --graph '
+        </p>
+        <p>
+            CONFLITOS no git: digamos que numa branch paralela fizéssemos uma
+            alteração no h1 principal e outra pessoa na branch principal
+            fizéssemos outra alteração na mesma linha do h1 principal, estamos
+            gerando conflitos de informações ao dar um git rebase ou git merge
+            teremos que solucionar e escolher qual alteração será "re baseada"
+            ou "merge ada" NOTA: ideal é sempre fazer um git pull do projeto
+            principal para sempre estarmos com o projeto principal atualizado,
+            mas solução do conflito é analisada pelo gerente do projeto e os
+            conflitos podem ser evitados se cada equipe do projeto focar na sua
+            área de desenvolvimento.
+        </p>
+        <p>
+            CTRL + Z no GIT - SE ainda não "adicionamos - git add" as alterações
+            realizadas ao repositório, podemos descartar as alterações passando
+            o comando ' git restore file.tal ', PORÉM SE já passamos o git add,
+            podemos comandar ' git restore --staged file.tal ' para dar um
+            restore ao estado adicionado ao repo, MAS SE já passamos pelo git
+            commit, usamos os seguintes comandos para reverter um commit:
+            primeiro pesquise pelo ' git log ' copie o hash do último commit e
+            passe o comando ' git revert hash ' ficando assim o comando para
+            reverter ' git revert 787858700954mk5990m508905m5995mn59959995m '
+            NOTA: ESSE HASH É DE EXEMPLO NÃO FAZ PARTE DA PASTA .GIT
+        </p>
+        <p>
+            GUARDANDO CÓDIGOS PARA DEPOIS - GIT STASH - onde guardamos as
+            alterações para um lugar temporário para posterior recuperação e
+            assim não geramos logs para o repo atual, assim simplesmente
+            passando o comando ' git stash ' e o código temporário é salvo num
+            lugar temporário, para posterior consulta. Passando o comando a
+            seguir ' git stash list ' podemos ver as "alterações" temporárias.
+            Para trazer os dados temporários usamos o comando git stash apply
+            com número stash ' git stash apply 0 ' e depois ' git stash drop '
+            para remover os stash, mas se quiser fazer as duas coisas ao mesmo
+            tempo podemos passar o comando ' git stash pop ' ele trás a
+            alteração de volta e remove da stash
+        </p>
+        <p>
+            NAVEGANDO PELOS COMMITS - GIT CHECKOUT - usamos o git checkout mais
+            o hash inicial ou 7 primeiros números do hash para navegar entre os
+            commits ficando assim o comando: ' git checkout ea539b3 ' assim
+            estamos para um determinado commit. NOTA: QUANDO FAZEMOS ISSO
+            ENTRAMOS NUM ESTADO DE "DESANEXADO" DO HEAD DO REPO, ou seja, não
+            estamos mais na branch do projeto estamos simplesmente num estado do
+            HEAD indicado pelo hash do commit. Assim podemos, por exemplo, fazer
+            uma brach desse estado com ' git checkout -b new-branch-name ',
+            lembrando de fazer um commit nesse novo brach e depois para voltar a
+            "ANEXAR" O HEAD AO REPO novamente passando ' git checkout nome do
+            remoto ' ou ' git checkout main '
+        </p>
+        <p>
+            O GIT DIFF é um comando que mostra as diferenças nas modificações do
+            código num espaço de tempo que podemos determinar entre dois
+            commits: ' git diff hash_qualquer_anterior..hash_último_atual ' .
+            NOTA: usando somente ' git diff ' vemos somente o que ainda não
+            adicionado ao repo pelo git add
+        </p>
+        <p>
+            TAGS no GIT - ou checkpoint de versões "fechadas", é um modo de
+            "cravar" uma informação no repo para informar que estamos, por
+            exemplo, finalizando uma versão "final" para determinado momento,
+            momento este que poderá retornado facilmente inserindo uma tag, para
+            isso usamos: ' git tag -a nome_da_tag_v1.00 -m "mensagem_da_tag" ',
+            detalhe o -a indica que estamos adicionando uma tag o comando ' git
+            tag ' mostra todas as tags disponíveis no projeto
+        </p>
+        <p>
+            PONTO INTERESSANTE DAS TAGS - podemos dar um push somente da versão
+            ' git push local_z_server nome_da_tag_v1.00 ' ou até enviar, por
+            exemplo, para o git hub ' git push origin nome_da_tag_v1.00 ' e
+            assim podemos visualizar num campo específico do git hub uma RELEASE
+            FACILITANDO ASSIM O DOWNLOAD DA VERSÃO "FINAL" DO PROJETO
+        </p>
+    </body>
+</html>
