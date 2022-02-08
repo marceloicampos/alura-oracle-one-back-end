@@ -7,8 +7,9 @@
         <title>Alvo</title>
     </head>
     <body>
+        <p><a href="./">Voltar</a></p>
         <canvas width="600" height="400"></canvas>
-        <p>Acerto o Alvo</p>
+        <p>Acerte o Alvo</p>
         <script>
             var tela = document.querySelector('canvas')
             var pincel = tela.getContext('2d')
@@ -53,7 +54,7 @@
                 desenhaAlvo(xQualquer, yQualquer)
             }
 
-            setInterval(reloadScreen, 3000)
+            setInterval(reloadScreen, 1000)
 
             function dispara(evento) {
                 var x = evento.pageX - tela.offsetLeft
