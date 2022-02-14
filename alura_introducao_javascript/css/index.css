@@ -10,6 +10,13 @@ body {
     /* new color */
 }
 
+a:link {
+    color: whitesmoke;
+}
+a:visited {
+    color: green;
+}
+
 header {
     background-color: #333;
     height: 3em;

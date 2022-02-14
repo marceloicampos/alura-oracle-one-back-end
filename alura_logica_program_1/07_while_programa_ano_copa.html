@@ -25,6 +25,14 @@
         // mostra('e ' + anoCopa)
         // anoCopa+=4
         // mostra('f ' + anoCopa)
+        var loginCadastrado = 'alura'
+        var senhaCadastrada = 'alura321'
+        if (
+            loginCadastrado !== loginInformado &&
+            senhaCadastrada !== senhaInformada
+        ) {
+            mostra('DICA - o login e senha estão no FIM da página')
+        }
         while (anoCopa <= limite) {
             mostra('a ' + anoCopa)
             anoCopa = anoCopa + 4
@@ -101,7 +109,7 @@
             ) {
                 n = 3
                 alert('Bem-vindo ao sistema ' + loginInformado)
-                mostra('VOCÊ ACESSOU O SISTEMA !')
+                mostra('VOCÊ ACESSOU O SISTEMA - PELO PRIMEIRO!')
             } else {
                 alert('Login inválido. Tente novamente')
             }
@@ -110,7 +118,9 @@
             loginCadastrado !== loginInformado &&
             senhaCadastrada !== senhaInformada
         ) {
-            mostra('VOCÊ ERROU A SENHA !')
+            mostra(
+                'VOCÊ ERROU o login e a senha - PELO PRIMEIRO ! - login: alura - senha: alura321'
+            )
         }
         mostra('FIM')
 
@@ -121,15 +131,15 @@
         var tentativaAtual = 1
 
         while (tentativaAtual <= maxTentativas) {
-            var loginInformado = prompt('Informe seu login')
-            var senhaInformada = prompt('Informe sua senha')
+            var loginInformado = prompt('Informe seu LOGIN')
+            var senhaInformada = prompt('Informe sua SENHA')
 
             if (
                 loginCadastrado == loginInformado &&
                 senhaCadastrada == senhaInformada
             ) {
                 alert('Bem-vindo ao sistema, ' + loginInformado)
-
+                mostra('VOCÊ ACESSOU O SISTEMA - PELO SEGUNDO!')
                 tentativaAtual = maxTentativas // acertou, então faço o gasto de todas as tentativas para sair do loop. Lá o final vai incrementar + 1!
             } else {
                 if (tentativaAtual == 3) {
@@ -142,5 +152,14 @@
             // vai para a próxima tentativa
             tentativaAtual = tentativaAtual + 1
         }
+        if (
+            loginCadastrado !== loginInformado &&
+            senhaCadastrada !== senhaInformada
+        ) {
+            mostra(
+                'VOCÊ ERROU O LOGIN E A SENHA - PELO SEGUNDO ! - login: alura - senha: alura321'
+            )
+        }
+        mostra('FIM')
     </script>
 </html>

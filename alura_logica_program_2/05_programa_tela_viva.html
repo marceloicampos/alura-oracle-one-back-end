@@ -10,7 +10,7 @@
         <p><a href="./">Voltar</a></p>
         <canvas width="600" height="400"></canvas>
         <script>
-            document.write('<h1>Tela Viva</h1>')
+            document.write('<h1>Clique no Canvas e descubra a coordenada do clique</h1>')
             var tela = document.querySelector('canvas')
             var pincel = tela.getContext('2d')
 
@@ -19,7 +19,7 @@
 
             pincel.font = '20px Georgia'
             pincel.fillStyle = 'black'
-            pincel.fillText('Tela Viva Alura', 50, 50)
+            pincel.fillText('clique e veja', 50, 50)
 
             function exibeAlertaCircular(evento) {
                 var x = evento.pageX - tela.offsetLeft
