@@ -1,2 +1,2 @@
 # alura-oracle-one-back-end
-Alura de Programação - Alura
+Oracle ONE - Aulas de Programação - Back End - Alura
