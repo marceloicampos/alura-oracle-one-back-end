@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            .salada {
+                border: 1px solid #000;
+            }
+            .principal {
+                border: 1px solid #000;
+            }
+            .acompanhamento {
+                border: 1px solid #000;
+            }
+        </style>
+        <title>Prato do Dia</title>
+    </head>
+    <body>
+        <p><a href="./">Voltar</a></p>
+        <p>Pratos da semana</p>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Salada</th>
+                    <th>Prato Principal</th>
+                    <th>Acompanhamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="sexta">
+                    <td>Sexta</td>
+                    <td class="salada">Alface e Tomate</td>
+                    <td class="principal">Frango Grelhado</td>
+                    <td class="acompanhamento">Arroz e Feijão preto</td>
+                </tr>
+                <tr id="segunda">
+                    <td>Segunda</td>
+                    <td class="salada">Salada de Batata</td>
+                    <td class="principal">Macarrão ao molho branco</td>
+                    <td class="acompanhamento">Milho e brócolis</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Selecione o Prato de Sexta</p>
+        <button id="btn-prato-sexta">Prato de Sexta</button>
+        <div id="div-prato-sexta"></div>
+        <br />
+        <button id="reload">Reload</button>
+        <script src="./js/prato-do-dia.js"></script>
+    </body>
+</html>
