@@ -1,6 +1,6 @@
-# alura-oracle-one-back-end
+alura-oracle-one-logica-programacao
 Oracle ONE - Aulas de Iniciante em Programação - Alura
 
-## [Aulas - CLIQUE AQUI](https://marceloicampos.github.io/alura-oracle-one-back-end/)
+## [Aulas - CLIQUE AQUI](https://#/)
 
-![](https://raw.githubusercontent.com/marceloicampos/alura-oracle-one-back-end/main/Forma%C3%A7%C3%A3o_INICIANTE_EM_PROGRAMACAO_ONE.jpg)
+![](https://#)
