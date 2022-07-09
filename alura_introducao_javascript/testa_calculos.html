@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>test JS</title>
+    </head>
+    <body>
+        <p><a href="./">Voltar</a></p>
+        <input class="frase" type="text" />
+        <button class="button">Copiar</button>
+        <span>e Colar:</span>
+        <span class="copia"></span>
+        <script>
+            var inputFrase = document.querySelector('.frase')
+            var button = document.querySelector('.button')
+            var copia = document.querySelector('.copia')
+
+            function buttonHandler() {
+                copia.textContent = inputFrase.value
+                console.log(inputFrase.value)
+                inputFrase.value = ''
+                console.log(copia.textContent)
+                console.log(inputFrase.value)
+            }
+
+            button.addEventListener('click', buttonHandler)
+        </script>
+        <br /><br />
+        <input class="numero" />
+        <span>x</span>
+        <input class="tabuada" />
+        <button class="aperta">Calcula</button>
+        <span>=</span>
+        <span class="resultado"></span>
+
+        <script>
+            var conta = {
+                aperta: document.querySelector('.aperta'),
+                numero: document.querySelector('.numero'),
+                tabuada: document.querySelector('.tabuada'),
+                resultado: document.querySelector('.resultado')
+            }
+
+            conta.aperta.addEventListener('click', function () {
+                conta.resultado.textContent =
+                    conta.numero.value * conta.tabuada.value
+            })
+        </script>
+        <br /><br />
+        <input class="num" />
+        <span>x</span>
+        <input class="tabu" />
+        <button class="clicar">Calcula</button>
+        <span>=</span>
+        <span class="result"></span>
+        <script>
+            function buscaElemento(seletor) {
+                return document.querySelector(seletor)
+            }
+
+            function aplicaTabuada(num, tabu) {
+                return num * tabu
+            }
+
+            var clicar = buscaElemento('.clicar')
+            var num = buscaElemento('.num')
+            var tabu = buscaElemento('.tabu')
+            var result = buscaElemento('.result')
+
+            clicar.addEventListener('click', function () {
+                result.textContent = aplicaTabuada(num.value, tabu.value)
+                num.value = ''
+                tabu.value = ''
+            })
+        </script>
+    </body>
+</html>
