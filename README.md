@@ -1,5 +1,5 @@
 # alura-oracle-one-back-end
-Oracle ONE - Aulas de Programação - Back End - Alura
+Oracle ONE - Aulas de Iniciante em Programação - Alura
 
 ## [Preview - CLIQUE AQUI](https://marceloicampos.github.io/alura-oracle-one-back-end/)
 
